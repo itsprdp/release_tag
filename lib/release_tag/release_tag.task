@@ -1,0 +1,21 @@
+namespace :release_tag do
+  desc 'Minor version'
+  task minor: [] do
+    ReleaseTag.next_tag "minor"
+  end
+
+  desc 'Major version'
+  task major: [] do
+    ReleaseTag.next_tag "major"
+  end
+
+  desc 'Patch version'
+  task patch: []  do
+    ReleaseTag.next_tag "patch"
+  end
+
+  desc 'Current version'
+  task current: [] do
+    ReleaseTag.current_tag
+  end
+end

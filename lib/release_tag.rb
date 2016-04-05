@@ -9,4 +9,6 @@ module ReleaseTag
   def self.next_tag release_type="patch", metadata=nil
     ReleaseTagVersion.new.next_tag(release_type, metadata)
   end
+
+  require "release_tag/railtie" if defined?(Rails)
 end
